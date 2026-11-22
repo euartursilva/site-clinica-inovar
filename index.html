@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clínica Inovar | Odontologia e Estética Integrada · Teixeira de Freitas</title>
+<meta name="description" content="Clínica Inovar em Teixeira de Freitas (BA): implantes, facetas, ortodontia, clareamento e mais. Nota 5,0 com 253 avaliações no Google. Agende sua avaliação.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#173f66; --navy-2:#0f2d4b; --gold:#c4a97e; --gold-2:#a88c5f;
+  --cream:#faf7f2; --ink:#1d2733; --muted:#5d6b7a; --line:#e8e1d6; --white:#fff;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;font-size:16px}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;color:var(--navy);line-height:1.1;font-weight:600}
+h2{font-size:clamp(32px,4vw,46px)}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-2);font-weight:600;margin-bottom:14px}
+
+/* demo ribbon */
+.demo{background:var(--navy-2);color:#dfe7ef;font-size:13px;text-align:center;padding:8px 16px}
+.demo b{color:var(--gold)}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:54px;height:54px;border-radius:50%;border:1px solid var(--line);object-fit:cover}
+.brand-txt strong{display:block;font-family:"Cormorant Garamond",serif;font-size:26px;letter-spacing:.18em;color:var(--navy);line-height:1}
+.brand-txt span{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-2)}
+.menu{display:flex;gap:28px;font-size:15px;color:var(--muted)}
+.menu a:hover{color:var(--navy)}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:14px 24px;font-weight:600;font-size:15px;transition:.2s;cursor:pointer;border:0}
+.btn-gold{background:var(--gold);color:var(--navy-2)}
+.btn-gold:hover{background:#d4bb92}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-2)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn svg{width:18px;height:18px}
+
+/* hero */
+.hero{background:radial-gradient(1200px 600px at 85% 10%,#24557f 0%,transparent 60%),linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;overflow:hidden;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding-top:88px;padding-bottom:96px}
+.hero h1{color:#fff;font-size:clamp(42px,5.6vw,72px);font-weight:600}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p.lead{font-size:19px;color:#c9d6e3;margin:22px 0 34px;max-width:540px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.rating{display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:8px 16px 8px 10px;margin-bottom:26px;font-size:14px;color:#e6edf4}
+.rating .g{width:26px;height:26px;border-radius:50%;background:#fff;display:grid;place-items:center;font-weight:700;color:#4285f4;font-size:14px}
+.stars{color:#f4c24d;letter-spacing:2px}
+.hero-card{background:var(--cream);border-radius:28px;padding:34px;color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35);position:relative}
+.hero-card .logo-big{width:150px;height:150px;border-radius:50%;margin:0 auto 18px;border:1px solid var(--line)}
+.hero-card h3{text-align:center;font-size:26px;margin-bottom:6px}
+.hero-card p{text-align:center;color:var(--muted);font-size:14px;margin-bottom:22px}
+.hc-list{display:grid;gap:10px}
+.hc-list div{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px}
+.hc-list i{width:30px;height:30px;border-radius:50%;background:#efe6d7;display:grid;place-items:center;color:var(--gold-2);font-style:normal;flex-shrink:0}
+
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22;pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.tour{background:var(--cream);padding-top:96px}
+.tour-box{position:relative;border-radius:28px;overflow:hidden;box-shadow:0 30px 70px rgba(15,45,75,.18);background:#000;aspect-ratio:16/9}
+.tour-box video{width:100%;height:100%;object-fit:cover;display:block}
+.tour-chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.tour-chips span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--navy)}
+.about-vis video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* trust strip */
+.strip{background:var(--cream);border-bottom:1px solid var(--line)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:30px 24px;text-align:center}
+.strip b{display:block;font-family:"Cormorant Garamond",serif;font-size:38px;color:var(--navy);line-height:1}
+.strip span{font-size:13px;color:var(--muted)}
+
+section{padding:96px 0}
+.head{max-width:640px;margin-bottom:48px}
+.head p{color:var(--muted);margin-top:14px;font-size:17px}
+
+/* treatments */
+.grid-t{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.t{border:1px solid var(--line);border-radius:var(--r);padding:28px;transition:.25s;background:#fff;display:flex;flex-direction:column}
+.t:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 18px 40px rgba(23,63,102,.08)}
+.t .ic{width:52px;height:52px;border-radius:14px;background:var(--navy);display:grid;place-items:center;margin-bottom:18px}
+.t .ic svg{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.6}
+.t h3{font-size:25px;margin-bottom:8px}
+.t p{color:var(--muted);font-size:15px;flex:1}
+.t a{margin-top:16px;font-size:14px;font-weight:600;color:var(--navy);display:inline-flex;gap:6px}
+.t a:hover{color:var(--gold-2)}
+
+/* about */
+.about{background:var(--cream)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-vis{aspect-ratio:4/5;border-radius:28px;background:linear-gradient(160deg,var(--navy),var(--navy-2));position:relative;overflow:hidden;display:grid;place-items:center}
+.about-vis .ph{color:#8fa6bd;font-size:13px;text-align:center;padding:24px;border:1px dashed #4c6c8c;border-radius:16px;max-width:70%}
+.about-vis .tag{position:absolute;bottom:24px;left:24px;right:24px;background:#fff;border-radius:16px;padding:18px 20px;display:flex;gap:14px;align-items:center}
+.about-vis .tag b{font-family:"Cormorant Garamond",serif;font-size:34px;color:var(--navy)}
+.about-vis .tag span{font-size:13px;color:var(--muted);line-height:1.4}
+.pillars{display:grid;gap:18px;margin-top:30px}
+.pillar{display:flex;gap:16px}
+.pillar .n{font-family:"Cormorant Garamond",serif;font-size:28px;color:var(--gold-2);width:36px;flex-shrink:0;line-height:1}
+.pillar h4{font-size:17px;color:var(--navy);margin-bottom:2px}
+.pillar p{color:var(--muted);font-size:15px}
+
+/* reviews */
+.reviews-top{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:40px}
+.score{display:flex;align-items:center;gap:18px;background:var(--cream);border-radius:var(--r);padding:18px 24px}
+.score b{font-family:"Cormorant Garamond",serif;font-size:52px;color:var(--navy);line-height:1}
+.score small{display:block;color:var(--muted);font-size:13px}
+.grid-r{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.r{border:1px solid var(--line);border-radius:var(--r);padding:28px;background:#fff}
+.r .stars{font-size:15px}
+.r p{margin:14px 0 20px;font-size:15.5px}
+.r .who{display:flex;align-items:center;gap:12px;font-size:14px}
+.r .av{width:38px;height:38px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-weight:600}
+.r .who small{display:block;color:var(--muted);font-size:12px}
+.tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.tags span{background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--muted)}
+.tags b{color:var(--navy)}
+
+/* content */
+.content{background:var(--navy-2);color:#fff}
+.content h2{color:#fff}
+.content .head p{color:#b8c7d6}
+.grid-c{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.c{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:28px}
+.c .k{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.c h3{color:#fff;font-size:24px;margin:10px 0}
+.c p{color:#b8c7d6;font-size:15px}
+
+/* cta */
+.cta{background:linear-gradient(120deg,var(--gold) 0%,#d9c29b 100%);border-radius:32px;padding:56px;display:grid;grid-template-columns:1.3fr .7fr;gap:32px;align-items:center}
+.cta h2{color:var(--navy-2)}
+.cta p{color:#3e3424;margin-top:10px;font-size:17px}
+.cta .btns{display:flex;flex-direction:column;gap:12px}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+.info{display:grid;gap:18px}
+.info div{display:flex;gap:16px;padding:20px;border:1px solid var(--line);border-radius:var(--r)}
+.info i{width:44px;height:44px;border-radius:12px;background:var(--cream);display:grid;place-items:center;flex-shrink:0;font-style:normal;font-size:20px}
+.info small{display:block;color:var(--muted);font-size:13px}
+.info b{color:var(--navy);font-weight:600}
+.ph-note{color:#b0723a;font-size:13px;font-style:italic}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:420px}
+.map iframe{width:100%;height:100%;min-height:420px;border:0}
+
+footer{background:var(--navy-2);color:#9fb2c5;font-size:14px;padding:48px 0 32px}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer .brand-txt strong{color:#fff}
+footer a:hover{color:#fff}
+footer .legal{margin-top:28px;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;width:100%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px}
+
+/* chat widget */
+.chat-btn{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;align-items:center;gap:10px;background:var(--navy);color:#fff;border-radius:999px;padding:12px 20px 12px 12px;box-shadow:0 14px 40px rgba(15,45,75,.4);cursor:pointer;border:0;font:600 15px Inter,sans-serif}
+.chat-btn .dot{width:38px;height:38px;border-radius:50%;background:var(--gold);display:grid;place-items:center;color:var(--navy-2)}
+.chat-btn .pulse{position:absolute;top:8px;left:40px;width:10px;height:10px;border-radius:50%;background:#3ccf7a;box-shadow:0 0 0 0 rgba(60,207,122,.7);animation:p 2s infinite}
+@keyframes p{70%{box-shadow:0 0 0 10px rgba(60,207,122,0)}100%{box-shadow:0 0 0 0 rgba(60,207,122,0)}}
+.chat{position:fixed;right:24px;bottom:96px;z-index:61;width:370px;max-width:calc(100vw - 32px);height:540px;max-height:calc(100vh - 130px);background:#fff;border-radius:22px;box-shadow:0 30px 80px rgba(15,45,75,.35);display:none;flex-direction:column;overflow:hidden}
+.chat.open{display:flex}
+.chat-h{background:var(--navy);color:#fff;padding:16px 18px;display:flex;align-items:center;gap:12px}
+.chat-h img{width:40px;height:40px;border-radius:50%}
+.chat-h b{display:block;font-size:15px}
+.chat-h small{font-size:12px;color:#a9d8b9}
+.chat-h button{margin-left:auto;background:none;border:0;color:#fff;font-size:22px;cursor:pointer}
+.msgs{flex:1;overflow-y:auto;padding:18px;background:#f4f1ec;display:flex;flex-direction:column;gap:10px}
+.m{max-width:85%;padding:10px 14px;border-radius:16px;font-size:14px;line-height:1.5;white-space:pre-line}
+.m.bot{background:#fff;border-bottom-left-radius:4px;align-self:flex-start}
+.m.me{background:var(--navy);color:#fff;border-bottom-right-radius:4px;align-self:flex-end}
+.m.typing{color:var(--muted);font-style:italic}
+.quick{display:flex;flex-wrap:wrap;gap:6px;padding:10px 14px;background:#f4f1ec;border-top:1px solid var(--line)}
+.quick button{background:#fff;border:1px solid var(--gold);color:var(--navy);border-radius:999px;padding:6px 12px;font:500 13px Inter,sans-serif;cursor:pointer}
+.quick button:hover{background:var(--gold)}
+.chat-in{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
+.chat-in input{flex:1;border:1px solid var(--line);border-radius:999px;padding:10px 16px;font:14px Inter,sans-serif;outline:none}
+.chat-in input:focus{border-color:var(--gold)}
+.chat-in button{background:var(--gold);border:0;border-radius:50%;width:42px;height:42px;cursor:pointer;color:var(--navy-2);font-size:18px}
+.chat-f{font-size:11px;text-align:center;color:var(--muted);padding:0 0 8px}
+
+@media (max-width:960px){
+  .menu{display:none}
+  .hero .wrap,.about .wrap,.contact .wrap,.cta{grid-template-columns:1fr}
+  .grid-t,.grid-r,.grid-c{grid-template-columns:1fr 1fr}
+  .strip .wrap{grid-template-columns:1fr 1fr}
+  .hero-card{display:none}
+}
+@media (max-width:620px){
+  .grid-t,.grid-r,.grid-c{grid-template-columns:1fr}
+  section{padding:68px 0}
+  .cta{padding:34px}
+  .nav .btn{padding:10px 16px;font-size:14px}
+  .brand-txt span{display:none}
+  .chat-btn{padding:8px;font-size:0;gap:0;right:16px;bottom:16px}
+  .chat-btn .pulse{left:36px}
+  .chat{right:16px;bottom:80px}
+}
+</style>
+</head>
+<body>
+
+<div class="demo">Proposta de site · <b>demonstração criada pela Verus Soluções Inteligentes</b> para a Clínica Inovar</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#topo" class="brand">
+      <img src="data:image/jpeg;base64,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" alt="Logo Inovar Odontologia & Estética Integrada">
+      <div class="brand-txt"><strong>INOVAR</strong><span>Odontologia &amp; Estética Integrada</span></div>
+    </a>
+    <nav class="menu">
+      <a href="#tratamentos">Tratamentos</a>
+      <a href="#espaco">A clínica</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn-navy" href="https://wa.me/5573999641198?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg> Agendar</a>
+  </div>
+</header>
+
+<main id="topo">
+<section class="hero">
+  <video class="hero-bg" src="videos/fundo-hero.mp4" poster="videos/poster-hero.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
+  <div class="wrap">
+    <div>
+      <div class="rating"><span class="g">G</span><span class="stars">★★★★★</span><span><b>5,0</b> · 253 avaliações no Google</span></div>
+      <h1>Um novo conceito em <em>saúde e estética</em> dental</h1>
+      <p class="lead">Equipe de profissionais especialistas prontos para cuidar do seu sorriso, no Centro de Teixeira de Freitas. Da avaliação ao resultado final, tudo em um só lugar.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="https://wa.me/5573999641198?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg> Agende sua avaliação</a>
+        <a class="btn btn-ghost" href="#tratamentos">Ver tratamentos</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img class="logo-big" src="data:image/jpeg;base64,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" alt="">
+      <h3>Seu sorriso merece esse cuidado</h3>
+      <p>Av. Mal. Castelo Branco, 345 · Centro</p>
+      <div class="hc-list">
+        <div><i>✦</i>Odontologia e estética integradas</div>
+        <div><i>✦</i>Equipe de especialistas</div>
+        <div><i>✦</i>Atendimento acolhedor, desde a recepção</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div><b>5,0</b><span>nota no Google</span></div>
+    <div><b>253</b><span>avaliações de pacientes</span></div>
+    <div><b>9</b><span>áreas de tratamento</span></div>
+    <div><b>5,8 mil</b><span>seguidores no Instagram</span></div>
+  </div>
+</div>
+
+<section id="tratamentos">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Tratamentos</div>
+      <h2>Cuidado completo para a saúde e a estética do seu sorriso</h2>
+      <p>Cada tratamento começa com um diagnóstico bem feito. Na avaliação, nossa equipe entende o seu caso e indica o melhor caminho.</p>
+    </div>
+    <div class="grid-t"><div class="t"><div class="ic"><svg viewBox="0 0 24 24"><path d="M7 3h10v4H7zM9 7h6l-1 3h-4zM10 10h4M9.5 12.5h5M10 15h4M10.5 17.5h3M12 20v1"/></svg></div><h3>Implantes</h3><p>Substituem dentes perdidos e devolvem a confiança para sorrir, o conforto para mastigar e a liberdade de aproveitar a vida.</p><a href="https://wa.me/5573999641198?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20implantes." target="_blank" rel="noopener">Agendar avaliação →</a></div><div class="t"><div class="ic"><svg viewBox="0 0 24 24"><path d="M8 3c-2.5 0-4 2-4 4.5 0 3 1.5 4.5 2 7.5.4 2.5 1 6 2.5 6s1.5-4 3.5-4 2 4 3.5 4 2.1-3.5 2.5-6c.5-3 2-4.5 2-7.5C20 5 18.5 3 16 3c-1.7 0-2.6 1-4 1S9.7 3 8 3Z"/></svg></div><h3>Facetas</h3><p>Corrigem forma, cor e pequenos desalinhamentos para um sorriso mais harmônico e natural.</p><a href="https://wa.me/5573999641198?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20facetas." target="_blank" rel="noopener">Agendar avaliação →</a></div><div class="t"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 9c3-2 15-2 18 0M3 15c3 2 15 2 18 0M6 9.5v5M10 9v6M14 9v6M18 9.5v5M3 12h18"/></svg></div><h3>Ortodontia</h3><p>Aparelhos para alinhar os dentes e corrigir a mordida, com acompanhamento em cada etapa.</p><a href="https://wa.me/5573999641198?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20ortodontia." target="_blank" rel="noopener">Agendar avaliação →</a></div><div class="t"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></div><h3>Clareamento</h3><p>Dentes mais claros com segurança. Se você tem restaurações, planejamos para o resultado ficar uniforme.</p><a href="https://wa.me/5573999641198?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20clareamento." target="_blank" rel="noopener">Agendar avaliação →</a></div><div class="t"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 19C5 10 11 5 20 4c-1 9-6 15-15 15ZM5 19l8-8"/></svg></div><h3>Saúde gengival</h3><p>Prevenção e tratamento de sangramentos, inflamações e retrações da gengiva.</p><a href="https://wa.me/5573999641198?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20sa%C3%BAde%20gengival." target="_blank" rel="noopener">Agendar avaliação →</a></div><div class="t"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 18h16M5 18l-1-9 4.5 3L12 6l3.5 6L20 9l-1 9"/></svg></div><h3>Prótese</h3><p>Coroas, pontes e próteses feitas sob medida para recuperar função e estética.</p><a href="https://wa.me/5573999641198?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20pr%C3%B3tese." target="_blank" rel="noopener">Agendar avaliação →</a></div><div class="t"><div class="ic"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg></div><h3>Bruxismo</h3><p>Diagnóstico e controle do apertamento e do ranger de dentes, que desgastam o sorriso.</p><a href="https://wa.me/5573999641198?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20bruxismo." target="_blank" rel="noopener">Agendar avaliação →</a></div><div class="t"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 14.5c2 1.8 5 1.8 7 0M9 9.5h.01M15 9.5h.01"/></svg></div><h3>Dor orofacial</h3><p>Avaliação de dores na mandíbula, estalos na ATM e tensões na face.</p><a href="https://wa.me/5573999641198?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20dor%20orofacial." target="_blank" rel="noopener">Agendar avaliação →</a></div><div class="t"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20 15 9M14 4v3M19 9h-3M17.5 5.5l-2 2M18 14v2M20 15h-4M9 3v2M10 4H8"/></svg></div><h3>Odontopediatria</h3><p>Atendimento para os pequenos com carinho, paciência e a visita da Fada do Dente 🧚.</p><a href="https://wa.me/5573999641198?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20odontopediatria." target="_blank" rel="noopener">Agendar avaliação →</a></div></div>
+  </div>
+</section>
+
+<section class="tour" id="espaco">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Nosso espaço</div>
+      <h2>Conheça a clínica antes mesmo de chegar</h2>
+      <p>Um ambiente pensado para o seu conforto: recepção acolhedora, sala de espera tranquila e consultórios modernos.</p>
+    </div>
+    <div class="tour-box"><video src="videos/tour-clinica-inovar.mp4" poster="videos/poster-tour.jpg" autoplay muted loop playsinline controls preload="metadata"></video></div>
+    <div class="tour-chips"><span>Recepção</span><span>Consultórios</span><span>Sala de espera</span></div>
+  </div>
+</section>
+
+<section class="about" id="clinica">
+  <div class="wrap">
+    <div class="about-vis">
+      <video src="videos/consultorio-1.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+      <div class="tag"><b>5,0</b><span>Pacientes destacam o <strong>atendimento</strong>, o <strong>ambiente</strong> e a <strong>recepção</strong></span></div>
+    </div>
+    <div>
+      <div class="eyebrow">A clínica</div>
+      <h2>Odontologia e estética, integradas em um só cuidado</h2>
+      <p style="color:var(--muted);margin-top:16px;font-size:17px">Na Inovar, saúde bucal e estética caminham juntas. Reunimos especialistas de diferentes áreas para que você faça seu tratamento com planejamento, conforto e acompanhamento próximo.</p>
+      <div class="pillars">
+        <div class="pillar"><span class="n">01</span><div><h4>Diagnóstico antes de tudo</h4><p>O exame clínico avalia cada detalhe para definir o tratamento mais adequado para você.</p></div></div>
+        <div class="pillar"><span class="n">02</span><div><h4>Especialistas em cada área</h4><p>Implantes, ortodontia, prótese, estética, dor orofacial e mais, com profissionais dedicados.</p></div></div>
+        <div class="pillar"><span class="n">03</span><div><h4>Acolhimento de verdade</h4><p>Um ambiente limpo, organizado e humano, do primeiro contato ao pós-tratamento.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="avaliacoes">
+  <div class="wrap">
+    <div class="reviews-top">
+      <div class="head" style="margin-bottom:0">
+        <div class="eyebrow">Avaliações</div>
+        <h2>O que nossos pacientes dizem</h2>
+      </div>
+      <div class="score"><b>5,0</b><div><span class="stars">★★★★★</span><small>253 avaliações no Google</small></div></div>
+    </div>
+    <div class="grid-r">
+      <div class="r"><span class="stars">★★★★★</span><p>“Atendimento excelente e ótimos profissionais, super recomendo. 💙”</p><div class="who"><span class="av">S</span><div>Sara M.<small>Avaliação no Google</small></div></div></div>
+      <div class="r"><span class="stars">★★★★★</span><p>“Ótimo atendimento, profissionais atenciosos e ambiente bem organizado. Muito humanos e preocupados com nosso bem-estar! Recomendo a todos!”</p><div class="who"><span class="av">P</span><div>Patricia P.<small>Avaliação no Google</small></div></div></div>
+      <div class="r"><span class="stars">★★★★★</span><p>“Fui muito bem atendida desde a recepção até a consulta, com profissionais atenciosos, competentes e cuidadosos. O ambiente é limpo, organizado e acolhedor, o que faz toda a diferença.”</p><div class="who"><span class="av">S</span><div>Sofia B.<small>Avaliação no Google</small></div></div></div>
+    </div>
+    <div class="tags"><span>Mais citados:</span><span><b>atendimento</b> · 15</span><span><b>ambiente</b> · 8</span><span><b>recepção</b> · 7</span><span><b>tratamento</b> · 7</span></div>
+  </div>
+</section>
+
+<section class="content">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Informação que cuida</div>
+      <h2>Dicas da nossa equipe</h2>
+      <p>Conteúdos que publicamos no Instagram para tirar as dúvidas mais comuns dos pacientes.</p>
+    </div>
+    <div class="grid-c">
+      <div class="c"><span class="k">Pós-operatório</span><h3>Tirei o siso. E agora, o que posso comer?</h3><p>A alimentação faz parte da recuperação. Veja as orientações para os primeiros dias após a extração.</p></div>
+      <div class="c"><span class="k">Estética</span><h3>Quer clarear, mas tem restauração?</h3><p>O clareamento age só no dente natural, não em resinas ou porcelanas. Planejar evita um sorriso com tons diferentes.</p></div>
+      <div class="c"><span class="k">Prevenção</span><h3>Câncer bucal: diagnóstico precoce salva</h3><p>O Dr. Djalma, especialista em lesões bucais, levou esse tema à 7ª Jornada Odontológica da Faculdade Anhanguera.</p></div>
+    </div>
+    <div style="margin-top:36px"><a class="btn btn-gold" href="https://www.instagram.com/inovarteixeiradefreitas/" target="_blank" rel="noopener">Siga @inovarteixeiradefreitas</a></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <h2>Pronto para cuidar do seu sorriso?</h2>
+        <p>Agende sua avaliação pelo WhatsApp. Se preferir, tire suas dúvidas agora com a assistente virtual da clínica, 24 horas por dia.</p>
+      </div>
+      <div class="btns">
+        <a class="btn btn-navy" href="https://wa.me/5573999641198?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg> Agendar pelo WhatsApp</a>
+        <button class="btn" style="background:#fff;color:var(--navy)" onclick="openChat()">Falar com a assistente</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contato" style="padding-top:0">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Contato</div>
+      <h2 style="margin-bottom:26px">Venha nos visitar</h2>
+      <div class="info">
+        <div><i>📍</i><span><small>Endereço</small><b>Av. Mal. Castelo Branco, 345 · Centro</b><br>Teixeira de Freitas · BA · 45985-160</span></div>
+        <div><i>💬</i><span><small>WhatsApp</small><b><a href="https://wa.me/5573999641198?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">(73) 99964-1198</a></b></span></div>
+        <div><i>📞</i><span><small>Telefone</small><b><a href="tel:+557332915959">(73) 3291-5959</a></b></span></div>
+        <div><i>🕗</i><span><small>Horário</small><b>Segunda a partir das 08h</b><br><span class="ph-note">Horários completos a confirmar com a clínica</span></span></div>
+      </div>
+    </div>
+    <div class="map"><iframe loading="lazy" title="Mapa da Clínica Inovar" src="https://maps.google.com/maps?q=Cl%C3%ADnica%20Inovar%2C%20Av.%20Mal.%20Castelo%20Branco%2C%20345%2C%20Teixeira%20de%20Freitas%20BA&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><div class="brand-txt"><strong>INOVAR</strong><span>Odontologia &amp; Estética Integrada</span></div></div>
+    <div>Av. Mal. Castelo Branco, 345 · Centro · Teixeira de Freitas · BA<br>(73) 3291-5959 · WhatsApp (73) 99964-1198</div>
+    <div><a href="https://www.instagram.com/inovarteixeiradefreitas/" target="_blank" rel="noopener">Instagram</a></div>
+    <div class="legal"><span>Responsável técnico: [nome] · CRO-BA [número] <span class="ph-note">(obrigatório pelo CFO, a preencher)</span></span><span>Site demonstração · Verus Soluções Inteligentes · @verus.solutions</span></div>
+  </div>
+</footer>
+
+<!-- Assistente virtual (demonstração) -->
+<button class="chat-btn" onclick="toggleChat()" aria-label="Abrir assistente virtual"><span class="pulse"></span><span class="dot">✦</span>Tire suas dúvidas</button>
+<div class="chat" id="chat" role="dialog" aria-label="Assistente virtual Inovar">
+  <div class="chat-h">
+    <img src="data:image/jpeg;base64,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" alt="">
+    <div><b>Assistente Inovar</b><small>● online agora</small></div>
+    <button onclick="toggleChat()" aria-label="Fechar">×</button>
+  </div>
+  <div class="msgs" id="msgs"></div>
+  <div class="quick" id="quick"></div>
+  <form class="chat-in" onsubmit="send(event)"><input id="inp" placeholder="Digite sua dúvida..." autocomplete="off"><button aria-label="Enviar">➤</button></form>
+  <div class="chat-f">Demonstração do assistente de IA da Verus</div>
+</div>
+
+<script>
+const WA = "https://wa.me/5573999641198";
+const KB = [{"nome": "Implantes", "keys": ["implant", "dente faltando", "perdi"], "chat": "O implante substitui o dente perdido com uma raiz artificial e uma coroa sob medida. Na avaliação, a equipe verifica sua saúde bucal e o osso da região para planejar o caso."}, {"nome": "Facetas", "keys": ["faceta", "lente", "porcelana", "resina"], "chat": "Facetas são lâminas finas aplicadas na frente dos dentes para ajustar cor, forma e proporção. O planejamento define o material e a espessura ideais para o seu sorriso."}, {"nome": "Ortodontia", "keys": ["ortodont", "aparelho", "alinhador", "torto"], "chat": "Na ortodontia alinhamos os dentes e corrigimos a mordida com aparelho. O tempo e o tipo de aparelho são definidos na avaliação, de acordo com o seu caso."}, {"nome": "Clareamento", "keys": ["clare", "branq", "amarel"], "chat": "O clareamento deixa os dentes naturais mais claros. Atenção: ele não muda a cor de resinas ou porcelanas, por isso fazemos um planejamento para o resultado ficar uniforme."}, {"nome": "Saúde gengival", "keys": ["gengiv", "sangra", "tartaro", "limpeza", "periodont"], "chat": "Cuidamos da saúde da gengiva: limpeza, controle de sangramento e inflamação e acompanhamento periodontal. Gengiva saudável é a base de qualquer tratamento."}, {"nome": "Prótese", "keys": ["protese", "dentadura", "coroa", "ponte"], "chat": "Fazemos próteses sob medida, como coroas, pontes e próteses removíveis, para recuperar a mastigação e a estética do sorriso."}, {"nome": "Bruxismo", "keys": ["bruxismo", "ranger", "aperta", "placa"], "chat": "Bruxismo é o hábito de apertar ou ranger os dentes, muitas vezes dormindo. Avaliamos o caso e indicamos o controle mais adequado, como a placa miorrelaxante."}, {"nome": "Dor orofacial", "keys": ["orofacial", "atm", "mandibula", "estalo", "dor de cabeca"], "chat": "Tratamos dores na face e na mandíbula, estalos na ATM e tensões musculares. O primeiro passo é uma avaliação detalhada para entender a causa."}, {"nome": "Odontopediatria", "keys": ["crianc", "filho", "infantil", "pediatr", "fada"], "chat": "Atendemos crianças com paciência e carinho, para que a ida ao dentista seja tranquila desde cedo. A Fada do Dente também faz parte dessa história! 🧚"}];
+const msgs = document.getElementById('msgs'), quick = document.getElementById('quick');
+let started = false, lead = {};
+function add(txt, who){ const d=document.createElement('div'); d.className='m '+who; d.textContent=txt; msgs.appendChild(d); msgs.scrollTop=msgs.scrollHeight; return d; }
+function bot(txt, opts){ const t=add('digitando...','bot typing'); setTimeout(()=>{ t.remove(); add(txt,'bot'); setQuick(opts||['Tratamentos','Agendar avaliação','Endereço e horário','Convênios e valores']); }, 650); }
+function setQuick(opts){ quick.innerHTML=''; opts.forEach(o=>{ const b=document.createElement('button'); b.textContent=o; b.onclick=()=>handle(o); quick.appendChild(b); }); }
+function openChat(){ document.getElementById('chat').classList.add('open'); if(!started){ started=true; bot('Olá! 😊 Sou a assistente virtual da Clínica Inovar. Posso tirar dúvidas sobre tratamentos, endereço e já deixar sua avaliação encaminhada. Como posso ajudar?'); } }
+function toggleChat(){ const c=document.getElementById('chat'); c.classList.contains('open')?c.classList.remove('open'):openChat(); }
+function norm(s){ return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
+function handle(txt){
+  add(txt,'me'); quick.innerHTML='';
+  const q = norm(txt);
+  if(lead.step==='nome'){ lead.nome=txt.trim(); lead.step='interesse'; return bot(`Prazer, ${lead.nome.split(' ')[0]}! Qual tratamento te interessa?`, KB.map(k=>k.nome).concat(['Ainda não sei'])); }
+  if(lead.step==='interesse'){ lead.interesse=txt.trim(); lead.step='periodo'; return bot('Perfeito. Qual período é melhor para você?', ['Manhã','Tarde','Qualquer horário']); }
+  if(lead.step==='periodo'){ lead.periodo=txt.trim(); lead.step=null;
+    const m = encodeURIComponent(`Olá! Sou ${lead.nome}. Gostaria de agendar uma avaliação de ${lead.interesse}, de preferência no período da ${lead.periodo.toLowerCase()}.`);
+    bot(`Prontinho! Preparei sua solicitação:\n\n• Nome: ${lead.nome}\n• Interesse: ${lead.interesse}\n• Período: ${lead.periodo}\n\nToque em "Enviar no WhatsApp" para a recepção confirmar o melhor horário.`, []);
+    setTimeout(()=>{ const a=document.createElement('a'); a.href=WA+'?text='+m; a.target='_blank'; a.rel='noopener'; a.className='btn btn-gold'; a.style.cssText='align-self:flex-start;padding:10px 18px;font-size:14px'; a.textContent='Enviar no WhatsApp'; msgs.appendChild(a); msgs.scrollTop=msgs.scrollHeight; setQuick(['Tratamentos','Endereço e horário']); }, 800);
+    return; }
+  if(/agend|marcar|consulta|avalia|horario disp/.test(q)){ lead={step:'nome'}; return bot('Ótimo! Vou deixar sua avaliação encaminhada. Qual é o seu nome?', []); }
+  if(/endere|onde|local|chegar|horario|abre|funciona/.test(q)){ return bot('Estamos na Av. Mal. Castelo Branco, 345, no Centro de Teixeira de Freitas.\nTelefone: (73) 3291-5959\nWhatsApp: (73) 99964-1198\n\nAbrimos segunda a partir das 08h. Quer que eu encaminhe sua avaliação?', ['Agendar avaliação','Tratamentos']); }
+  if(/conven|plano|valor|preco|quanto|pagamento|parcel/.test(q)){ return bot('Valores e formas de pagamento dependem do seu caso, por isso tudo começa com uma avaliação. A recepção também informa sobre convênios. Quer agendar a sua?', ['Agendar avaliação','Tratamentos']); }
+  if(/tratament|servic|fazem|oferec/.test(q)){ return bot('Na Inovar você encontra:\n'+KB.map(k=>'• '+k.nome).join('\n')+'\n\nSobre qual quer saber mais?', KB.map(k=>k.nome)); }
+  const k = KB.find(k=>k.keys.some(w=>q.includes(w)));
+  if(k){ return bot(k.chat+'\n\nQuer agendar uma avaliação?', ['Agendar avaliação','Tratamentos']); }
+  if(/dor|urgen|quebr|incha|sangr/.test(q)){ return bot('Sinto muito que esteja passando por isso. Para casos de dor ou urgência, o mais rápido é falar direto com a recepção pelo WhatsApp (73) 99964-1198. Se for algo grave, procure um pronto atendimento.', ['Agendar avaliação']); }
+  bot('Boa pergunta! Essa eu prefiro deixar para a nossa equipe responder com precisão. Posso encaminhar você para o WhatsApp da recepção ou agendar uma avaliação.', ['Agendar avaliação','Tratamentos','Endereço e horário']);
+}
+function send(e){ e.preventDefault(); const i=document.getElementById('inp'); if(!i.value.trim())return; handle(i.value); i.value=''; }
+</script>
+</body>
+</html>
