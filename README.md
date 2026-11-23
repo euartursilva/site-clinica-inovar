@@ -2,6 +2,8 @@
 
 Proposta de site criada pela **Verus Soluções Inteligentes** (@verus.solutions) para a Clínica Inovar | Odontologia e Estética Integrada, em Teixeira de Freitas (BA).
 
+Site (demonstração): https://euartursilva.github.io/site-clinica-inovar/
+
 Esta é uma demonstração para apresentação ao cliente, não o site oficial da clínica. A página está marcada como `noindex` para não aparecer no Google.
 
 - `index.html`: página única, sem dependências
